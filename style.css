@@ -1,0 +1,133 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100svh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+input,
+select,
+button {
+  padding: 6px 12px;
+}
+
+.primary-btn {
+  padding: 6px 12px;
+  color: white;
+  background-color: orangered;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}
+
+
+.todo {
+  margin-block: 50px;
+  width: 600px;
+  margin-inline: auto;
+  padding: 20px;
+  background-color: #ccc;
+  border: 2px solid lightblue;
+}
+
+.todo h2 {
+  margin-bottom: 10px;
+}
+
+.todo .search-input {
+  margin-bottom: 16px;
+}
+
+.todo .search-input input {
+  width: 100%;
+}
+
+.todo .search-input .categories {
+  display: flex;
+  column-gap: 10px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  margin-bottom: 20px;
+}
+
+.todo-item {
+  padding: 12px;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.todo-item.completed {
+  opacity: 0.5;
+}
+
+.todo-item.completed .todo-item-name,
+.todo-item.completed .todo-item-content {
+  text-decoration: line-through;
+}
+
+.todo-item-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.todo-category {
+  padding: 2px 6px;
+  color: orangered;
+  font-size: 12px;
+  border: 1px solid orangered;
+  border-radius: 4px;
+}
+
+.todo-head-buttons button {
+  padding: 2px 6px;
+}
+
+.todo-item-name {
+  margin-bottom: 8px;
+}
+
+.todo-item-content {
+  font-size: 14px;
+}
+
+.todo-item-content:last-of-type {
+  margin-bottom: 16px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-bottom: 20px;
+}

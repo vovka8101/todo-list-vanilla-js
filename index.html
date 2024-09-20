@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+  <title>Document</title>
+</head>
+<body>
+  <section class="todo">
+    <h2>Список справ</h2>
+    <div class="search-input">
+      <input type="search">
+      <div class="categories">
+        <span>Домашні справи</span>
+        <span>Робота</span>
+        <span>Фітнес</span>
+      </div>
+    </div>
+
+    <ul class="todo-list">
+      <!-- <li class="todo-item">
+        <div class="todo-item-head">
+          <div class="todo-category">Домашні справи</div>
+          <div class="todo-head-buttons">
+            <button data-action="edit" class="btn-edit">edit</button>
+            <button data-action="remove" class="btn-remove">remove</button>
+          </div>
+        </div>
+        <div class="todo-item-body">
+          <h3 class="todo-item-name">Купити продукти</h3>
+          <p class="todo-item-content">Скласти список необхідних продуктів та відвідати магазин</p>
+          <button data-action="complete" class="btn-complete primary-btn">Завершити</button>
+        </div>
+      </li> -->
+    </ul>
+
+    <div class="form hidden">
+      <select name="todo-categories" id="todo-categories">
+        <option value="Домашні справи" selected>Домашні справи</option>
+        <option value="Робота">Робота</option>
+        <option value="Фітнес">Фітнес</option>
+      </select>
+      <input id="todo-input-name" type="text" placeholder="Назва">
+      <input id="todo-input-text" type="text" placeholder="Текст">
+      <button id="btn-add-todo">Додати</button>
+    </div>
+
+    <div class="btn-container">
+      <button class="btn-new-todo primary-btn">Додати справу</button>
+    </div>
+
+  </section>
+</body>
+</html>
