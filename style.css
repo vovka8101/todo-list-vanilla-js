@@ -50,8 +50,13 @@ button {
   margin-bottom: 10px;
 }
 
-.todo .search-input {
+.todo .todo-search {
   margin-bottom: 16px;
+}
+
+.todo .search-input {
+  display: flex;
+  column-gap: 16px;
 }
 
 .todo .search-input input {

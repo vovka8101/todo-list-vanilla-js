@@ -5,6 +5,9 @@ const todoName = document.getElementById("todo-input-name");
 const todoText = document.getElementById("todo-input-text");
 const addTodoBtn = document.getElementById("btn-add-todo");
 const todoList = document.querySelector(".todo-list");
+const searchTodoBtn = document.getElementById("btn-search-todo");
+
+let TODOS = todoList.querySelectorAll(".todo-item");
 
 function addNewTodo() {
   form.classList.toggle("hidden");
@@ -37,7 +40,6 @@ todoList.addEventListener("click", function(e) {
 addTodoBtn.addEventListener("click", function() {
   if (!todoName.value || !todoText.value) return;
   
-  console.log("add")
   const todoItem = document.createElement("li");
   todoItem.setAttribute("class", "todo-item");
 
@@ -56,8 +58,29 @@ addTodoBtn.addEventListener("click", function() {
     </div>`;
   
   todoList.append(todoItem);
+  TODOS = todoList.querySelectorAll(".todo-item");
 
   todoName.value = "";
   todoText.value = "";
   addNewTodo();
 });
+
+searchTodoBtn.addEventListener("click", function() {
+  const searchText = document.querySelector(".todo-search .search-input input").value;
+  
+  const filteredTodos = Array.from(TODOS).filter(todo => {
+    const todoName = todo.querySelector(".todo-item-name").textContent;
+    return todoName.includes(searchText);
+  })
+
+  todoList.innerHTML = "";
+
+  let newHtml = "";
+
+  filteredTodos.forEach(todo => {
+    newHtml += todo.outerHTML;
+  })
+
+  todoList.innerHTML = newHtml;
+  
+})
