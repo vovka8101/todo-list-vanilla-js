@@ -19,7 +19,7 @@
       </div>
     </div>
 
-    <ul class="todo-list">
+    <ul id="todo-list" class="todo-list">
       <!-- <li class="todo-item">
         <div class="todo-item-head">
           <div class="todo-category">Домашні справи</div>
@@ -36,19 +36,19 @@
       </li> -->
     </ul>
 
-    <div class="form hidden">
-      <select name="todo-categories" id="todo-categories">
+    <form id="form-add-todo" class="form hidden" action="">
+      <select name="categories" id="todo-categories">
         <option value="Домашні справи" selected>Домашні справи</option>
         <option value="Робота">Робота</option>
         <option value="Фітнес">Фітнес</option>
       </select>
-      <input id="todo-input-name" type="text" placeholder="Назва">
-      <input id="todo-input-text" type="text" placeholder="Текст">
-      <button id="btn-add-todo">Додати</button>
-    </div>
+      <input name="name" type="text" placeholder="Назва">
+      <input name="content" type="text" placeholder="Текст">
+      <button type="submit">Додати</button>
+    </form>
 
     <div class="btn-container">
-      <button class="btn-new-todo primary-btn">Додати справу</button>
+      <button id="btn-toggle-add-todo" class="primary-btn">Додати справу</button>
     </div>
 
   </section>
