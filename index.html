@@ -5,35 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <script src="main.js" defer></script>
-  <title>Document</title>
+  <title>Todo list</title>
 </head>
 <body>
   <section class="todo">
-    <h2>Список справ</h2>
-    <div class="search-input">
-      <input type="search">
-      <div class="categories">
-        <span>Домашні справи</span>
-        <span>Робота</span>
-        <span>Фітнес</span>
-      </div>
+    <div class="title-h2">
+      <h2>Список справ</h2>
     </div>
+    <form id="form-search-todo" class="search-form" action="">
+      <div class="search-input">
+        <input name="search" type="input" tabindex="1">
+        <button type="submit" tabindex="2"><img src="./assets/images/search.svg" alt="Search"></button>
+      </div>
+      <div class="categories">
+        <label class="category">
+          <input type="checkbox" value="Домашні справи">
+          <span>Домашні справи</span>
+        </label>
+        <label class="category">
+          <input type="checkbox" value="Робота">
+          <span>Робота</span>
+        </label>
+        <label class="category">
+          <input type="checkbox" value="Фітнес">
+          <span>Фітнес</span>
+        </label>
+      </div>
+    </form>
 
     <ul id="todo-list" class="todo-list">
-      <!-- <li class="todo-item">
+      <li class="todo-item">
         <div class="todo-item-head">
           <div class="todo-category">Домашні справи</div>
           <div class="todo-head-buttons">
-            <button data-action="edit" class="btn-edit">edit</button>
-            <button data-action="remove" class="btn-remove">remove</button>
+            <button data-action="edit">
+              <img src="./assets/images/edit.svg" alt="Edit">
+            </button>
+            <button data-action="remove">
+              <img src="./assets/images/delete.svg" alt="Delete">
+            </button>
           </div>
         </div>
         <div class="todo-item-body">
-          <h3 class="todo-item-name">Купити продукти</h3>
+          <div class="todo-item-name title-h3">
+            <h3>Купити продукти</h3>
+          </div>
           <p class="todo-item-content">Скласти список необхідних продуктів та відвідати магазин</p>
-          <button data-action="complete" class="btn-complete primary-btn">Завершити</button>
+          <button data-action="complete" class="btn-complete primary-btn">
+            <img src="./assets/images/check-mark.svg" alt="Check mark">
+            <span>Завершити</span>
+          </button>
         </div>
-      </li> -->
+      </li>
     </ul>
 
     <form id="form-add-todo" class="form hidden" action="">
